@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To‑Do List — HTML/CSS/JS</title>
+  <link rel="stylesheet" href="todolist.css">
+  
+</head>
+<body>
+  <div class="wrap" role="application" aria-label="To‑Do List">
+    <header>
+      <h1>✅ To‑Do List</h1>
+      <div class="count" id="count">0 items</div>
+    </header>
+
+    <section class="card" aria-live="polite">
+      <form class="add-row" id="form" autocomplete="off">
+        <input id="input" type="text" placeholder="What do you need to do?" aria-label="New task" required />
+        <button class="btn" type="submit" aria-label="Add task">Add</button>
+      </form>
+
+      <div class="controls">
+        <div class="seg" role="tablist" aria-label="Filter tasks">
+          <button type="button" role="tab" data-filter="all" class="active">All</button>
+          <button type="button" role="tab" data-filter="active">Active</button>
+          <button type="button" role="tab" data-filter="done">Completed</button>
+        </div>
+        <button class="icon-btn clear-btn" id="clearDone" type="button" title="Clear completed">Clear completed</button>
+      </div>
+
+      <ul id="list" role="list" aria-label="Tasks"></ul>
+
+      <div id="empty" class="empty" hidden>Nothing here yet. Add your first task! 🎯</div>
+
+      <footer>
+        <small>Tip: double‑click a task to edit. Press Enter to save, Esc to cancel.</small>
+        <small id="saveHint">Autosaved</small>
+      </footer>
+    </section>
+  </div>
+
+  <script src="todolist.js">
+   
+  </script>
+</body>
+</html>
